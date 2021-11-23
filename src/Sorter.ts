@@ -1,9 +1,10 @@
 
-interface Sortable {
+//Interface is no longer needed with Sorter as an abstract class
+/*interface Sortable {
     length: number;
     compare(leftIndex: number, rightIndex: number): boolean;
     swap(leftIndex: number, rightIndex: number): void; 
-}
+}*/
 
 export abstract class Sorter {
     //when adding abstract, need to specify potential inputs to remove errors
