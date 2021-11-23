@@ -1,28 +1,39 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Sorter_1 = require("./Sorter");
 const NumbersCollection_1 = require("./NumbersCollection");
+const LinkedList_1 = require("./LinkedList");
 //For number collection
 const numbersCollection = new NumbersCollection_1.NumbersCollection([10, 3, -5, 0]);
-const sorter = new Sorter_1.Sorter(numbersCollection);
+//used for new abstract sorter class
+//numbersCollection.sort();
+//console.log(numbersCollection.data);
+//used with previous sorter class
+/*const sorter = new Sorter(numbersCollection);
 sorter.sort();
-console.log(numbersCollection.data);
+console.log(numbersCollection.data);*/
 //for charactersCollection
 /*
 const charactersCollection = new CharactersCollection('Xaayb');
 const sorter = new Sorter(charactersCollection);
 sorter.sort();
 console.log(charactersCollection.data);*/
+//used with abstract sorter class
+//const charactersCollection = new CharactersCollection('Xaayb');
+//charactersCollection.sort();
+//console.log(charactersCollection.data);
 //for linked lists
-/*const linkedList = new LinkedList();
+const linkedList = new LinkedList_1.LinkedList();
 linkedList.add(500);
 linkedList.add(-10);
 linkedList.add(-3);
 linkedList.add(4);
-
-const sorter = new Sorter(linkedList);
+//used with previous code prior to abstract sorter class
+/*const sorter = new Sorter(linkedList);
 sorter.sort();
 linkedList.print();*/
+//used with abstract sorterclass
+linkedList.sort();
+linkedList.print();
 //Initial code
 //not ideal code because always have to add new instances and nested if statements if type is added to constructor collection
 class SorterOld {
